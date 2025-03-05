@@ -2,7 +2,7 @@
 import axios from "axios";
 
 // Definindo a URL base da API
-const API_URL = "http://localhost:5000/api"; // URL correta do seu backend
+const API_URL = "http://trackfilmes-backend-production.up.railway.app"; // URL correta do seu backend
 
 // Cria um cliente axios com configurações padrão
 const apiClient = axios.create({
