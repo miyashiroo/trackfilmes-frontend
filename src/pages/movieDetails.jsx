@@ -7,7 +7,6 @@ import {
   checkIfInWatchlist,
   removeFromWatchlist,
 } from "../services/watchlistService";
-import DebugWatchlist from "../components/DebugWatchlist";
 
 const MovieDetails = () => {
   const { id } = useParams();
