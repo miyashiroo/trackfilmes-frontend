@@ -1,9 +1,19 @@
 // src/index.js
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { bootstrapCustomTheme, addGoogleFonts } from "./bootstrap-theme";
+
+// Adicionar o tema personalizado do Bootstrap
+const style = document.createElement("style");
+style.innerHTML = bootstrapCustomTheme;
+document.head.appendChild(style);
+
+// Adicionar a fonte Poppins
+addGoogleFonts();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

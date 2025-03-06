@@ -153,11 +153,11 @@ const ProfileEdit = () => {
     <div className="container mt-5">
       <div className="row">
         <div className="col-md-8 mx-auto">
-          <div className="card">
-            <div className="card-header bg-primary text-white">
-              <h3 className="mb-0">Editar Perfil</h3>
+          <div className="card shadow-sm">
+            <div className="card-header bg-primary py-3">
+              <h3 className="text-white mb-0">Editar Perfil</h3>
             </div>
-            <div className="card-body">
+            <div className="card-body bg-white">
               <ul className="nav nav-tabs mb-4">
                 <li className="nav-item">
                   <button
@@ -166,6 +166,7 @@ const ProfileEdit = () => {
                     }`}
                     onClick={() => setActiveTab("profile")}
                   >
+                    <i className="bi bi-person me-2"></i>
                     Informações Pessoais
                   </button>
                 </li>
@@ -176,6 +177,7 @@ const ProfileEdit = () => {
                     }`}
                     onClick={() => setActiveTab("password")}
                   >
+                    <i className="bi bi-key me-2"></i>
                     Alterar Senha
                   </button>
                 </li>
@@ -186,6 +188,7 @@ const ProfileEdit = () => {
                     } text-danger`}
                     onClick={() => setActiveTab("delete")}
                   >
+                    <i className="bi bi-trash me-2"></i>
                     Excluir Conta
                   </button>
                 </li>
@@ -193,9 +196,17 @@ const ProfileEdit = () => {
 
               {/* Mensagens de sucesso e erro */}
               {success && (
-                <div className="alert alert-success mb-4">{success}</div>
+                <div className="alert alert-success mb-4">
+                  <i className="bi bi-check-circle-fill me-2"></i>
+                  {success}
+                </div>
               )}
-              {error && <div className="alert alert-danger mb-4">{error}</div>}
+              {error && (
+                <div className="alert alert-danger mb-4">
+                  <i className="bi bi-exclamation-triangle-fill me-2"></i>
+                  {error}
+                </div>
+              )}
 
               {/* Aba de edição de perfil */}
               {activeTab === "profile" && (
@@ -212,7 +223,7 @@ const ProfileEdit = () => {
                     <Form>
                       <div className="mb-3">
                         <label htmlFor="name" className="form-label">
-                          Nome
+                          <i className="bi bi-person me-2"></i>Nome
                         </label>
                         <Field
                           type="text"
@@ -230,7 +241,7 @@ const ProfileEdit = () => {
 
                       <div className="mb-3">
                         <label htmlFor="email" className="form-label">
-                          Email
+                          <i className="bi bi-envelope me-2"></i>Email
                         </label>
                         <Field
                           type="email"
@@ -248,7 +259,8 @@ const ProfileEdit = () => {
 
                       <div className="mb-3">
                         <label htmlFor="birthDate" className="form-label">
-                          Data de Nascimento (opcional)
+                          <i className="bi bi-calendar me-2"></i>Data de
+                          Nascimento (opcional)
                         </label>
                         <Field
                           type="date"
@@ -272,7 +284,21 @@ const ProfileEdit = () => {
                           className="btn btn-primary"
                           disabled={isSubmitting}
                         >
-                          {isSubmitting ? "Salvando..." : "Salvar Alterações"}
+                          {isSubmitting ? (
+                            <>
+                              <span
+                                className="spinner-border spinner-border-sm me-2"
+                                role="status"
+                                aria-hidden="true"
+                              ></span>
+                              Salvando...
+                            </>
+                          ) : (
+                            <>
+                              <i className="bi bi-check-circle me-2"></i>
+                              Salvar Alterações
+                            </>
+                          )}
                         </button>
                       </div>
                     </Form>
@@ -294,7 +320,7 @@ const ProfileEdit = () => {
                     <Form>
                       <div className="mb-3">
                         <label htmlFor="currentPassword" className="form-label">
-                          Senha Atual
+                          <i className="bi bi-lock me-2"></i>Senha Atual
                         </label>
                         <Field
                           type="password"
@@ -314,7 +340,7 @@ const ProfileEdit = () => {
 
                       <div className="mb-3">
                         <label htmlFor="newPassword" className="form-label">
-                          Nova Senha
+                          <i className="bi bi-lock-fill me-2"></i>Nova Senha
                         </label>
                         <Field
                           type="password"
@@ -331,8 +357,9 @@ const ProfileEdit = () => {
                           className="invalid-feedback"
                         />
                         <div className="form-text">
-                          A senha deve ter no mínimo 8 caracteres, incluindo
-                          números e caracteres especiais.
+                          <i className="bi bi-info-circle me-1"></i>A senha deve
+                          ter no mínimo 8 caracteres, incluindo números e
+                          caracteres especiais.
                         </div>
                       </div>
 
@@ -342,7 +369,21 @@ const ProfileEdit = () => {
                           className="btn btn-primary"
                           disabled={isSubmitting}
                         >
-                          {isSubmitting ? "Alterando..." : "Alterar Senha"}
+                          {isSubmitting ? (
+                            <>
+                              <span
+                                className="spinner-border spinner-border-sm me-2"
+                                role="status"
+                                aria-hidden="true"
+                              ></span>
+                              Alterando...
+                            </>
+                          ) : (
+                            <>
+                              <i className="bi bi-key-fill me-2"></i>
+                              Alterar Senha
+                            </>
+                          )}
                         </button>
                       </div>
                     </Form>
@@ -355,6 +396,7 @@ const ProfileEdit = () => {
                 <div>
                   <div className="alert alert-danger mb-4">
                     <h5 className="alert-heading">
+                      <i className="bi bi-exclamation-triangle-fill me-2"></i>
                       Atenção! Esta ação não pode ser desfeita.
                     </h5>
                     <p>
@@ -373,6 +415,7 @@ const ProfileEdit = () => {
                       <Form>
                         <div className="mb-3">
                           <label htmlFor="password" className="form-label">
+                            <i className="bi bi-shield-lock me-2"></i>
                             Confirme sua senha
                           </label>
                           <Field
@@ -390,6 +433,7 @@ const ProfileEdit = () => {
                             className="invalid-feedback"
                           />
                           <div className="form-text">
+                            <i className="bi bi-info-circle me-1"></i>
                             Por segurança, digite sua senha para confirmar a
                             exclusão da conta.
                           </div>
@@ -401,9 +445,21 @@ const ProfileEdit = () => {
                             className="btn btn-danger"
                             disabled={isSubmitting}
                           >
-                            {isSubmitting
-                              ? "Processando..."
-                              : "Excluir Minha Conta Permanentemente"}
+                            {isSubmitting ? (
+                              <>
+                                <span
+                                  className="spinner-border spinner-border-sm me-2"
+                                  role="status"
+                                  aria-hidden="true"
+                                ></span>
+                                Processando...
+                              </>
+                            ) : (
+                              <>
+                                <i className="bi bi-trash-fill me-2"></i>
+                                Excluir Minha Conta Permanentemente
+                              </>
+                            )}
                           </button>
                         </div>
                       </Form>

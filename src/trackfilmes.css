@@ -1,0 +1,529 @@
+/* trackfilmes.css - Estilização personalizada com melhor contraste */
+
+:root {
+  --primary-color: #1e3a8a; /* Azul escuro */
+  --primary-light: #3b82f6; /* Azul claro */
+  --secondary-color: #f59e0b; /* Laranja/amarelo */
+  --dark-color: #1f2937; /* Cinza escuro quase preto */
+  --light-color: #f3f4f6; /* Cinza claro */
+  --success-color: #10b981; /* Verde */
+  --danger-color: #ef4444; /* Vermelho */
+  --text-color: #374151; /* Cor do texto principal */
+  --text-muted: #6b7280; /* Cor do texto secundário */
+  --font-main: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  --transition-speed: 0.3s;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos Globais */
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: #f8fafc;
+  line-height: 1.6;
+}
+
+/* Para adicionar a fonte Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Botões */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 2px 4px rgba(30, 58, 138, 0.2);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #172b6f; /* Um pouco mais escuro */
+  border-color: #172b6f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(30, 58, 138, 0.3);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #0d9668; /* Um pouco mais escuro */
+  border-color: #0d9668;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(16, 185, 129, 0.3);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+  background-color: #dc2626; /* Um pouco mais escuro */
+  border-color: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(239, 68, 68, 0.3);
+}
+
+.btn-outline-primary {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(30, 58, 138, 0.2);
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, var(--primary-color), #2563eb);
+  padding: 12px 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: white !important;
+  letter-spacing: 0.5px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Para corrigir o botão de sair no navbar */
+.navbar-dark .navbar-nav .nav-link.btn-link {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 15px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-dark .navbar-nav .nav-link.btn-link:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 20px -3px rgba(0, 0, 0, 0.1),
+    0 10px 10px -2px rgba(0, 0, 0, 0.04);
+}
+
+.card-header {
+  background-color: var(--primary-color);
+  color: white !important;
+  font-weight: 600;
+  padding: 16px 20px;
+  border-bottom: none;
+}
+
+.card-header h3,
+.card-header .mb-0 {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  color: white !important;
+}
+
+.card-body {
+  padding: 20px;
+  background-color: white;
+  color: var(--text-color);
+}
+
+.card-footer {
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 15px 20px;
+}
+
+.card-img-top {
+  height: 380px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Formulários */
+.form-control {
+  border-radius: 8px;
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  color: #1f2937;
+  background-color: white;
+}
+
+.form-control:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.form-label {
+  font-weight: 500;
+  color: #1f2937 !important;
+  margin-bottom: 8px;
+}
+
+.form-check-label {
+  color: var(--text-color);
+}
+
+.form-text {
+  color: var(--text-muted);
+}
+
+/* Badges */
+.badge {
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.badge.bg-warning {
+  background-color: var(--secondary-color) !important;
+  color: #fff !important;
+}
+
+.badge.bg-secondary {
+  background-color: #64748b !important;
+}
+
+.badge.bg-success {
+  background-color: var(--success-color) !important;
+}
+
+/* Alerts */
+.alert {
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: var(--box-shadow);
+}
+
+.alert-success {
+  background-color: #ecfdf5;
+  color: #065f46;
+}
+
+.alert-danger {
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+
+.alert-info {
+  background-color: #eff6ff;
+  color: #1e40af;
+}
+
+/* Loading Spinner */
+.spinner-border.text-primary {
+  color: var(--primary-light) !important;
+}
+
+/* Página de Detalhes do Filme */
+.movie-details {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: var(--card-shadow);
+}
+
+.movie-poster {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.movie-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--dark-color);
+}
+
+.movie-tagline {
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.movie-meta {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.movie-overview {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+  color: var(--text-color);
+}
+
+/* Watchlist page */
+.watchlist-filter {
+  margin-bottom: 25px;
+}
+
+.watched-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--success-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* Tabs */
+.nav-tabs {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  font-weight: 500;
+  color: #4b5563;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.2s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--primary-color);
+  border-bottom: 2px solid #cbd5e1;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  background-color: transparent;
+  font-weight: 600;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 280px;
+  }
+
+  .movie-title {
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+}
+
+/* Animação de fade-in para páginas */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilização para listas de filmes */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Estilização para página de login/cadastro */
+.auth-container {
+  max-width: 450px;
+  margin: 60px auto;
+}
+
+.auth-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.auth-header {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white !important;
+  text-align: center;
+  padding: 25px 20px;
+}
+
+.auth-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: white !important;
+}
+
+.auth-body {
+  padding: 30px;
+  background-color: white;
+}
+
+.auth-footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  color: var(--text-color);
+}
+
+/* Classificação por estrelas */
+.rating {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.rating i {
+  margin-right: 5px;
+  color: white;
+}
+
+/* Texto e elementos específicos */
+.text-muted {
+  color: #6b7280 !important;
+}
+
+.card-text,
+p {
+  color: var(--text-color);
+}
+
+/* Cores mais claras para plano de fundo */
+.bg-light {
+  background-color: #f9fafb !important;
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+/* Melhorias para dropdowns e listas */
+.dropdown-menu {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+}
+
+.dropdown-item {
+  color: var(--text-color);
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #f3f4f6;
+  color: var(--primary-color);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.dropdown-divider {
+  margin: 8px 0;
+  border-color: #e5e7eb;
+}
+
+/* Links em geral */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #172b6f;
+  text-decoration: underline;
+}
+
+/* Texto em geral */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+/* Container customizado */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Ajustes para footer (se existir) */
+footer {
+  background-color: #f8fafc;
+  color: var(--text-color);
+  padding: 2rem 0;
+  border-top: 1px solid #e5e7eb;
+}

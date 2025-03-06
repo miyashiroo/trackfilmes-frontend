@@ -20,6 +20,7 @@ import Navbar from "./components/Navbar";
 
 // Importar CSS do Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./trackfilmes.css";
 import "./App.css";
 
 function App() {
