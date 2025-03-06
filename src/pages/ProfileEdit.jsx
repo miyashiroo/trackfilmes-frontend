@@ -31,7 +31,7 @@ const ProfileEdit = () => {
     newPassword: Yup.string()
       .min(8, "Senha deve ter no mínimo 8 caracteres")
       .matches(
-        /^(?=.*[0-9])(?=.*[!@#$%^&*])/,
+        /^(?=.*[0-9])(?=.*[!@#$%^&*.])/,
         "Senha deve conter pelo menos um número e um caractere especial"
       )
       .required("Nova senha é obrigatória"),
