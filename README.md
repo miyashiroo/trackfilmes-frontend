@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# TrackFilmes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TrackFilmes é uma aplicação web que permite aos usuários rastrear e gerenciar os filmes que desejam assistir. Com uma interface intuitiva e moderna, os usuários podem buscar filmes, adicionar à sua watchlist e marcar como assistidos.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- Cadastro e autenticação de usuários
+- Busca de filmes usando a API do TMDB
+- Criação de watchlist personalizada
+- Marcar filmes como assistidos
+- Gestão de perfil de usuário
+- Design responsivo para desktop e dispositivos móveis
 
-### `npm start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend
+- React.js
+- React Router
+- Bootstrap (com tema personalizado)
+- Formik & Yup para validação de formulários
+- Axios para requisições HTTP
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend
+- Node.js com Express
+- Sequelize ORM
+- MySQL para persistência de dados
+- JWT para autenticação
+- Integração com The Movie Database API
 
-### `npm test`
+## Instalação e Configuração
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Pré-requisitos
+- Node.js (versão 14 ou superior)
+- MySQL
 
-### `npm run build`
+### Frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/trackfilmes.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Navegue até a pasta do projeto frontend
+cd trackfilmes/frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Instale as dependências
+npm install
 
-### `npm run eject`
+# Crie um arquivo .env na raiz do projeto com:
+REACT_APP_API_URL=http://localhost:5000/api
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Inicie a aplicação em modo de desenvolvimento
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Backend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Navegue até a pasta do projeto backend
+cd trackfilmes/backend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Instale as dependências
+npm install
 
-## Learn More
+# Crie um arquivo .env na raiz do projeto backend com:
+PORT=5000
+DB_NAME=trackfilmes
+DB_USER=seu_usuario_mysql
+DB_PASSWORD=sua_senha_mysql
+DB_HOST=localhost
+JWT_SECRET=seu_token_secreto
+TMDB_API_KEY=sua_chave_api_tmdb
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Inicie o servidor
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acesso à Aplicação
 
-### Code Splitting
+A aplicação está disponível online nos seguintes endereços:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Frontend: [https://trackfilmes-frontend-production.up.railway.app](https://trackfilmes-frontend-production.up.railway.app)
+- Backend: [https://trackfilmes-backend-production.up.railway.app](https://trackfilmes-backend-production.up.railway.app)
 
-### Analyzing the Bundle Size
+## Próximos Passos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Implementação de recomendações personalizadas
+- Adição de funcionalidade de reviews e avaliações
+- Integração com redes sociais para compartilhamento
+- Implementação de recuperação de senha
+- Lista de filmes assistidos com histórico e estatísticas
 
-### Making a Progressive Web App
+## Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Desenvolvido por [Seu Nome](https://github.com/seu-usuario)
 
-### Advanced Configuration
+## Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
