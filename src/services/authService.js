@@ -1,8 +1,7 @@
-// src/services/authService.js
 import axios from "axios";
 
 // Definindo a URL base da API
-const API_URL = "https://trackfilmes-backend-production.up.railway.app/api";
+const API_URL = process.env.API_URL;
 
 // Cria um cliente axios com configurações padrão
 const apiClient = axios.create({

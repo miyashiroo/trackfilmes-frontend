@@ -1,4 +1,3 @@
-// src/contexts/authContext.js
 import React, { createContext, useState, useEffect } from "react";
 import {
   getCurrentUser,
@@ -14,7 +13,6 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Verificar o estado de autenticação ao carregar o aplicativo
     const checkAuthStatus = () => {
       if (isAuthenticated()) {
         setCurrentUser(getCurrentUser());

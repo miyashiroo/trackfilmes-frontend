@@ -1,8 +1,3 @@
-// Tema Bootstrap personalizado para TrackFilmes
-// Adicione este arquivo antes da importação do Bootstrap
-// Ou adicione ao seu arquivo principal index.js
-
-// Tema personalizado do Bootstrap (opcional)
 export const bootstrapCustomTheme = `
   :root {
     --bs-primary: #1e3a8a;
@@ -51,7 +46,7 @@ export const bootstrapCustomTheme = `
   }
 `;
 
-// Para adicionar a fonte Poppins ao seu documento
+// Para adicionar a fonte Poppins
 export const addGoogleFonts = () => {
   const link = document.createElement("link");
   link.rel = "stylesheet";
@@ -60,7 +55,6 @@ export const addGoogleFonts = () => {
   document.head.appendChild(link);
 };
 
-// Criar um objeto nomeado para exportação
 const themeExports = {
   bootstrapCustomTheme,
   addGoogleFonts,

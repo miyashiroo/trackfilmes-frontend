@@ -1,4 +1,3 @@
-// src/pages/MovieSearch.jsx
 import React, { useState, useEffect } from "react";
 import {
   searchMovies,
