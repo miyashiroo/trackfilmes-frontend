@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Constantes para a API do TheMovieDB
-const API_KEY = "fba97eee1eb18d4cd6717a0479460b1e";
+const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL = "https://api.themoviedb.org/3";
 const LANGUAGE = "pt-BR"; //
 
