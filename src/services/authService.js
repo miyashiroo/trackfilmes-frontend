@@ -84,8 +84,8 @@ export const loginUser = async (credentials) => {
 export const updateUserProfile = async (userData) => {
   try {
     console.log("Atualizando perfil do usuário:", userData);
-    // Ajustando o endpoint para o padrão /auth/ em vez de /users/
-    const response = await apiClient.put("/auth/profile", userData);
+
+    const response = await apiClient.put("/users/profile", userData);
     console.log("Resposta da atualização:", response.data);
 
     // Atualiza os dados do usuário no localStorage
@@ -108,7 +108,7 @@ export const updatePassword = async (passwordData) => {
       newPassword: "********", // Ocultado por segurança
     });
     // Ajustando o endpoint para o padrão /auth/ em vez de /users/
-    const response = await apiClient.put("/auth/password", passwordData);
+    const response = await apiClient.put("/users/password", passwordData);
     console.log("Resposta da atualização de senha:", "Sucesso");
     return response.data;
   } catch (error) {
