@@ -60,4 +60,10 @@ export const addGoogleFonts = () => {
   document.head.appendChild(link);
 };
 
-export default { bootstrapCustomTheme, addGoogleFonts };
+// Criar um objeto nomeado para exportação
+const themeExports = {
+  bootstrapCustomTheme,
+  addGoogleFonts,
+};
+
+export default themeExports;
